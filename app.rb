@@ -25,15 +25,10 @@ class App < Sinatra::Base
       redirect '/fetch'
     else
       "Session value has not been set!"
+    end 
+  end 
 
-      get '/set_session' do
-        session[:id] = 1
-        if session[:id] == 1
-          redirect '/fetch_session_id'
-
-
-
-  get '/fetch' do
+    get '/fetch' do
     "You did it! session[:foo] value: #{session[:foo]}.\nMove on to Part II of this lab at '/second_exercise' "
   end
 
@@ -44,7 +39,7 @@ class App < Sinatra::Base
   get '/set_session' do
     #set session id here
 
-    if session[:id] == 1
+    if session[:id] = 1
       # "Session ID set. It's currently set to #{session[:id]}."
       redirect '/fetch_session_id'
     else
