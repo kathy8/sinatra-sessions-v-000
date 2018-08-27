@@ -29,9 +29,8 @@ class App < Sinatra::Base
         session[:id] = 1
         if session[:id] == 1
           redirect '/fetch_session_id'
-      end
-    end
-  end
+
+
 
   get '/fetch' do
     "You did it! session[:foo] value: #{session[:foo]}.\nMove on to Part II of this lab at '/second_exercise' "
