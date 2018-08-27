@@ -25,8 +25,8 @@ class App < Sinatra::Base
       redirect '/fetch'
     else
       "Session value has not been set!"
-    end 
-  end 
+    end
+  end
 
     get '/fetch' do
     "You did it! session[:foo] value: #{session[:foo]}.\nMove on to Part II of this lab at '/second_exercise' "
@@ -53,6 +53,7 @@ class App < Sinatra::Base
 
   get '/logout' do
     #clear session hash here
+    session.clear
     "Session has now been cleared. session content: #{session.inspect}. Continue on to the '/finish' line!"
   end
 
